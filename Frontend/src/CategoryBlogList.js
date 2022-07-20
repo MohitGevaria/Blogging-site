@@ -1,15 +1,16 @@
-
+import { useParams } from "react-router-dom";
 import BlogList from "./BlogList";
 import useFetch from "./UseFetch";
 
-const Home = () => {
-    
-    const { data: blogs, isPending, error } = useFetch("http://localhost:8080/blogs")
+const CategoryBlogList = () => {
+    const { id } = useParams();
+    const url = "http://localhost:8080/blogs/category/" + id;
+    const { data: blogs, isPending, error } = useFetch(url)
     
 
     
 
-    return ( 
+    return (
         <div className="home">
             {error && <div>{error}</div>}
             {isPending && <div className="loader"><h2>Loading....</h2></div>}
@@ -18,4 +19,4 @@ const Home = () => {
     );
 }
  
-export default Home;
+export default CategoryBlogList;

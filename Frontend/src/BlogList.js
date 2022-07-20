@@ -9,10 +9,12 @@ const BlogList = ({blogs}) => {
                     <Link to={ `/blogs/${blog.id}` }>
                         <h2>{ blog.title }</h2>
                         <p>Written by { blog.author }</p>
+                        {blog.metadata && <small>{blog.metadata.date_uploaded}</small>}
                     </Link>
                     
                 </div>
             ))}
+            {!blogs && <h2>No Blogs Found.</h2>}
         </div>
     );
 }

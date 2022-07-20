@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import '~antd/dist/antd.css';
+
+
+.react-select-wrapper.multi .Select-menu .Select-option:first-child {
+  font-weight: 600;
+}
 
 /* base styles */
 * {
@@ -101,4 +107,39 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  margin: 10px;
+}
+
+.category-tag {
+  padding: 50px;
+  background: skyblue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 2px;
+  box-shadow: 20px 20px 50px 10px;
+  display: inline-flex;
+}
+
+.category {
+  padding: 10px;
+}
+
+.category label {
+  padding: 10px;
+}
+
+
+.code-box-demo .ant-select {
+  margin: 0 8px 10px 0;
+}
+
+.ant-row-rtl .code-box-demo .ant-select {
+  margin: 0 0 10px 8px;
+}
+
+#components-select-demo-search-box .code-box-demo .ant-select {
+  margin: 10;
 }
