@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const BlogDetails = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const blogUrl = "http://localhost:8080/blogs/" + id;
-    const commentUrl = "http://localhost:8080/blogs/" + id + "/comments";
+    const blogUrl = "https://blogging-site-mohit.herokuapp.com/blogs/" + id;
+    const commentUrl = "https://blogging-site-mohit.herokuapp.com/blogs/" + id + "/comments";
     const {data:blog, isPending, error} = useFetch(blogUrl);
     const {data:comments} = useFetch(commentUrl);
     const [showComments, setShowComments] = useState(false);

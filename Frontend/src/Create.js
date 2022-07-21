@@ -12,8 +12,8 @@ const Create = () => {
     const [category, setCategory] = useState([]);
     const [description, setDescription] = useState("");
     const [ispending, setIsPending] = useState(false);
-    const { data:categories, isPending } = useFetch("http://localhost:8080/categories/");
-    const {data: publishers } = useFetch("http://localhost:8080/publishers/");
+    const { data:categories, isPending } = useFetch("https://blogging-site-mohit.herokuapp.com/categories/");
+    const {data: publishers } = useFetch("https://blogging-site-mohit.herokuapp.com/publishers/");
     let selectedPublishers = [];
     const navigate = useNavigate();
     
@@ -25,7 +25,7 @@ const Create = () => {
         
         setIsPending(true);
 
-        fetch("http://localhost:8080/blogs", {
+        fetch("https://blogging-site-mohit.herokuapp.com/blogs", {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)

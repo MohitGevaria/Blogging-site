@@ -7,7 +7,7 @@ import SelectDrop from "./SelectDrop";
 const EditBlog = () => {
 
     const { id } = useParams();
-    const url = "http://localhost:8080/blogs/" + id;
+    const url = "https://blogging-site-mohit.herokuapp.com/blogs/" + id;
     const {data:blog, isPending, error} = useFetch(url);
     const [ispending, setIsPending] = useState(false);
     const [title, setTitle] = useState("");
@@ -16,8 +16,8 @@ const EditBlog = () => {
     const [author, setAuthor] = useState("Mohit Gevaria");
     const [category, setCategory] = useState([]);
     const [description, setDescription] = useState("");
-    const { data:categories, isCatPending } = useFetch("http://localhost:8080/categories/");
-    const {data: publishers } = useFetch("http://localhost:8080/publishers/");
+    const { data:categories, isCatPending } = useFetch("https://blogging-site-mohit.herokuapp.com/categories/");
+    const {data: publishers } = useFetch("https://blogging-site-mohit.herokuapp.com/publishers/");
     let selectedPublishers = [];
     
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ const EditBlog = () => {
         const blog = {title, body, author, categories: categ, metadata, publisher: selectedPublishers, id:blogId};
         setIsPending(true);
 
-        fetch("http://localhost:8080/blogs", {
+        fetch("https://blogging-site-mohit.herokuapp.com/blogs", {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)

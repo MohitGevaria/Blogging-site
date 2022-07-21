@@ -7,7 +7,7 @@ import useFetch from "./UseFetch";
 const CategoryDetails = () => {
 
     const { id } = useParams();
-    const categoryUrl = "http://localhost:8080/categories/" + id;
+    const categoryUrl = "https://blogging-site-mohit.herokuapp.com/categories/" + id;
     const {data:category, isPending, error} = useFetch(categoryUrl);
 
     return ( 

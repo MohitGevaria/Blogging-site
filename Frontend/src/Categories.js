@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
     
-    const { data: categories } = useFetch("http://localhost:8080/categories")
+    const { data: categories } = useFetch("https://blogging-site-mohit.herokuapp.com/categories")
 
     
 

@@ -4,7 +4,7 @@ import useFetch from "./UseFetch";
 
 const Home = () => {
     
-    const { data: blogs, isPending, error } = useFetch("http://localhost:8080/blogs")
+    const { data: blogs, isPending, error } = useFetch("https://blogging-site-mohit.herokuapp.com/blogs")
     
 
     
