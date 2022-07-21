@@ -6,7 +6,7 @@ const { Option } = Select;
 
 const SelectDrop = ({handleChange, publishers}) => {
   const [children, setChildren] = useState([]);
-  const [size, setSize] = useState('middle');
+  const [size] = useState('middle');
 
   useEffect(() => {
     const data = [];

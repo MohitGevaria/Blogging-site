@@ -9,7 +9,7 @@ const BlogDetails = () => {
     const blogUrl = "http://localhost:8080/blogs/" + id;
     const commentUrl = "http://localhost:8080/blogs/" + id + "/comments";
     const {data:blog, isPending, error} = useFetch(blogUrl);
-    const {data:comments, isCommentPending, commentError} = useFetch(commentUrl);
+    const {data:comments} = useFetch(commentUrl);
     const [showComments, setShowComments] = useState(false);
     const [commenter, setCommenter] = useState("");
     const [commentBody, setCommentBody] = useState("");
